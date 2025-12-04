@@ -8,7 +8,15 @@
             "Hidenari\\ModelSample\\": "src/"
         }
     },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
     "require": {
       "php": "^8.4"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.1"
     }
 }
