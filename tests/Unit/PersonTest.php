@@ -3,13 +3,13 @@
 use Hidenari\ModelSample\Person;
 
 test('person model no parameter', function () {
-    $person = new Person();
+    $person = new Person;
     expect($person->name === 'Mr.Taro')->toBeTrue();
     expect($person->name === 'Taro')->toBeFalse();
     expect($person->name === 'taro')->toBeFalse();
     expect($person->age === 15)->toBeTrue();
 
-    $person->name = "jiro";
+    $person->name = 'jiro';
     expect($person->name === 'Mr.Jiro')->toBeTrue();
     expect($person->name === 'Mr.Taro')->toBeFalse();
 
@@ -19,7 +19,7 @@ test('person model no parameter', function () {
 });
 
 test('person model with name,age parameter', function () {
-    $person = new Person('jiro',20);
+    $person = new Person('jiro', 20);
     expect($person->name === 'Mr.Jiro')->toBeTrue();
     expect($person->name === 'Jiro')->toBeFalse();
     expect($person->name === 'jiro')->toBeFalse();
