@@ -12,7 +12,7 @@ interface PersonCapsuleInterface
         get;
     }
 
-    public function setName(string $name);
+    public function setName(string $name): void;
 
-    public function setAge(int $age);
+    public function setAge(int $age): void;
 }
