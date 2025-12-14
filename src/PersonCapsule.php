@@ -5,11 +5,11 @@ namespace Hidenari\ModelSample;
 class PersonCapsule implements PersonCapsuleInterface
 {
     public function __construct(
-        public private(set) string $name
+        private(set) string $name
         = 'taro' {
             get => 'Mr.'.$this->name;
         },
-        public private(set) int $age
+        private(set) int $age
         = 15 {
             get => $this->age;
         }
