@@ -19,9 +19,10 @@ Person Capsule Model
 When updating, execute the following command.
 
 ```
-./vendor/bin/pint
-./vendor/bin/pest
 herd coverage ./vendor/bin/pest --coverage
+./vendor/bin/pest
+./vendor/bin/pint
+./vendor/bin/phpstan analyse src --level=10
 ```
 
 ## License
