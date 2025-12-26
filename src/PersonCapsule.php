@@ -20,7 +20,7 @@ class PersonCapsule implements PersonCapsuleInterface
             get => $this->age;
         }
     ) {
-        $this->validateNameLength($this->name);
+        $this->validateNameLength();
         $this->validateOverFifteen();
     }
 

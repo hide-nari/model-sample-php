@@ -20,7 +20,7 @@ class Person implements PersonInterface
             set => $this->age = $value;
         }
     ) {
-        $this->validateNameLength($this->name);
+        $this->validateNameLength();
         $this->validateOverFifteen();
     }
 }
