@@ -6,7 +6,11 @@ use Override;
 
 class PersonCapsule implements PersonCapsuleInterface
 {
+    use ValidateNameLength;
+    use ValidateOverFifteen;
+
     public function __construct(
+        #[ValidateLength(4, 15)]
         private(set) string $name
         = 'taro' {
             get => 'Mr.'.$this->name;
@@ -16,6 +20,8 @@ class PersonCapsule implements PersonCapsuleInterface
             get => $this->age;
         }
     ) {
+        $this->validateNameLength($this->name);
+        $this->validateOverFifteen();
     }
 
     #[Override]
