@@ -1,6 +1,6 @@
 <?php
 
-namespace Hidenari\ModelSample;
+namespace Hidenari\ModelSample\Validate;
 
 trait ValidateOverFifteen
 {

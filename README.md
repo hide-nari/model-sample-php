@@ -15,8 +15,9 @@ Person Capsule Model
 - public setAge()
 
 Model bind check with attribute
-
 - name(4 to 15 length with added [Mr.] include)
+
+Model bind check with trait
 - age(over 15)
 
 ## Update Rules

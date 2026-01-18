@@ -4,6 +4,9 @@ namespace Hidenari\ModelSample;
 
 use Hidenari\ModelSample\Interface\AgeInterface;
 use Hidenari\ModelSample\Interface\NameInterface;
+use Hidenari\ModelSample\Validate\ValidateLength;
+use Hidenari\ModelSample\Validate\ValidateNameLength;
+use Hidenari\ModelSample\Validate\ValidateOverFifteen;
 
 class Person implements AgeInterface, NameInterface
 {
