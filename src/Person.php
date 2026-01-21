@@ -30,7 +30,7 @@ class Person implements AgeInterface, NameInterface
         = GradeEnum::BRONZE {
             get => $this->grade;
             set => $this->grade = $value;
-          }
+        }
     ) {
         $this->validateNameLength();
         $this->validateOverFifteen();

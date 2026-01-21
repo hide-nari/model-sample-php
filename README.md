@@ -1,11 +1,11 @@
 Person Model Sample on php version 8.4 or later.
 
-## about this package
-
-Person Model
+## About this package
+Person Model two programming pattern.
 
 - public name
 - public age
+- public grade
 
 Person Capsule Model
 
@@ -14,6 +14,7 @@ Person Capsule Model
 - public setName()
 - public setAge()
 
+## Bind Check
 Model bind check with attribute
 - name(4 to 15 length with added [Mr.] include)
 
