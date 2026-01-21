@@ -2,6 +2,7 @@
 
 namespace Hidenari\ModelSample;
 
+use Hidenari\ModelSample\Enum\GradeEnum;
 use Hidenari\ModelSample\Interface\AgeInterface;
 use Hidenari\ModelSample\Interface\NameInterface;
 use Hidenari\ModelSample\Validate\ValidateLength;
@@ -24,7 +25,12 @@ class Person implements AgeInterface, NameInterface
         = AgeInterface::INIT_AGE {
             get => $this->age;
             set => $this->age = $value;
-        }
+        },
+        public GradeEnum $grade
+        = GradeEnum::BRONZE {
+            get => $this->grade;
+            set => $this->grade = $value;
+          }
     ) {
         $this->validateNameLength();
         $this->validateOverFifteen();
