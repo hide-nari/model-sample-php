@@ -9,8 +9,7 @@ test('person model no parameter', function () {
         ->and($person->name === 'Taro')->toBeFalse()
         ->and($person->name === 'taro')->toBeFalse()
         ->and($person->age === 15)->toBeTrue()
-        ->and($person->grade === GradeEnum::BRONZE)->toBeTrue()
-        ->and($person->grade->value === 1)->toBeTrue();
+        ->and($person->grade === GradeEnum::BRONZE)->toBeTrue();
 
     $person->name = 'jiro';
     expect($person->name === 'Mr.Jiro')->toBeTrue()
@@ -22,13 +21,13 @@ test('person model no parameter', function () {
 
     $person->grade = GradeEnum::SILVER;
     expect($person->grade === GradeEnum::SILVER)->toBeTrue()
-        ->and($person->grade->value === 2)->toBeTrue()
-        ->and($person->grade->value === 1)->toBeFalse();
+        ->and($person->grade === GradeEnum::BRONZE)->toBeFalse()
+        ->and($person->grade === GradeEnum::GOLD)->toBeFalse();
 
     $person->grade = GradeEnum::GOLD;
     expect($person->grade === GradeEnum::GOLD)->toBeTrue()
-        ->and($person->grade->value === 3)->toBeTrue()
-        ->and($person->grade->value === 2)->toBeFalse();
+        ->and($person->grade === GradeEnum::BRONZE)->toBeFalse()
+        ->and($person->grade === GradeEnum::SILVER)->toBeFalse();
 });
 
 test('person model with name,age parameter', function () {
@@ -39,11 +38,8 @@ test('person model with name,age parameter', function () {
         ->and($person->age === 20)->toBeTrue()
         ->and($person->age === 15)->toBeFalse()
         ->and($person->grade === GradeEnum::BRONZE)->toBeTrue()
-        ->and($person->grade->value === 1)->toBeTrue()
         ->and($person->grade === GradeEnum::SILVER)->toBeFalse()
-        ->and($person->grade->value === 2)->toBeFalse()
-        ->and($person->grade === GradeEnum::GOLD)->toBeFalse()
-        ->and($person->grade->value === 3)->toBeFalse();
+        ->and($person->grade === GradeEnum::GOLD)->toBeFalse();
 });
 
 test('person model with kanji name,age parameter', function () {

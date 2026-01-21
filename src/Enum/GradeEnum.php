@@ -2,11 +2,11 @@
 
 namespace Hidenari\ModelSample\Enum;
 
-enum GradeEnum: int
+enum GradeEnum
 {
-    case GOLD = 3;
-    case SILVER = 2;
-    case BRONZE = 1;
+    case GOLD;
+    case SILVER;
+    case BRONZE;
 
     public function upGrade($grade)
     {
