@@ -2,12 +2,15 @@
 
 namespace Hidenari\ModelSample\Enum;
 
+use NoDiscard;
+
 enum GradeEnum
 {
     case GOLD;
     case SILVER;
     case BRONZE;
 
+    #[NoDiscard]
     public function upGrade(GradeEnum $grade): GradeEnum
     {
         return match ($grade) {
@@ -17,6 +20,7 @@ enum GradeEnum
         };
     }
 
+    #[NoDiscard]
     public function downGrade(GradeEnum $grade): GradeEnum
     {
         return match ($grade) {
