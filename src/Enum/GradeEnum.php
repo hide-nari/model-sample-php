@@ -11,9 +11,9 @@ enum GradeEnum
     case BRONZE;
 
     #[NoDiscard]
-    public function upGrade(GradeEnum $grade): GradeEnum
+    public function upGrade(): GradeEnum
     {
-        return match ($grade) {
+        return match ($this) {
             GradeEnum::BRONZE => GradeEnum::SILVER,
             GradeEnum::SILVER => GradeEnum::GOLD,
             default => throw new \InvalidArgumentException('Unexpected Enum value'),
@@ -21,9 +21,9 @@ enum GradeEnum
     }
 
     #[NoDiscard]
-    public function downGrade(GradeEnum $grade): GradeEnum
+    public function downGrade(): GradeEnum
     {
-        return match ($grade) {
+        return match ($this) {
             GradeEnum::GOLD => GradeEnum::SILVER,
             GradeEnum::SILVER => GradeEnum::BRONZE,
             default => throw new \InvalidArgumentException('Unexpected Enum value'),

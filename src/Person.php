@@ -21,16 +21,8 @@ class Person implements AgeInterface, NameInterface
             get => 'Mr.'.$this->name;
             set => $this->name = ucwords($value);
         },
-        public int $age
-        = AgeInterface::INIT_AGE {
-            get => $this->age;
-            set => $this->age = $value;
-        },
-        public GradeEnum $grade
-        = GradeEnum::BRONZE {
-            get => $this->grade;
-            set => $this->grade = $value;
-        }
+        public int $age = AgeInterface::INIT_AGE,
+        public GradeEnum $grade = GradeEnum::BRONZE
     ) {
         $this->validateNameLength();
         $this->validateOverFifteen();

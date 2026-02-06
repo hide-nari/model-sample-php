@@ -6,7 +6,7 @@ interface AgeInterface
 {
     const int INIT_AGE = 15;
 
-    public string $name {
+    public int $age {
         get;
         set;
     }

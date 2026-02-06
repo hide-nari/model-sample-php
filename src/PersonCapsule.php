@@ -21,14 +21,8 @@ class PersonCapsule implements AgeCapsuleInterface, NameCapsuleInterface
         = NameCapsuleInterface::INIT_NAME {
             get => 'Mr.'.$this->name;
         },
-        private(set) int $age
-        = AgeCapsuleInterface::INIT_AGE {
-            get => $this->age;
-        },
-        private(set) GradeEnum $grade
-        = GradeEnum::BRONZE {
-            get => $this->grade;
-        }
+        private(set) int $age = AgeCapsuleInterface::INIT_AGE,
+        private(set) GradeEnum $grade = GradeEnum::BRONZE
     ) {
         $this->validateNameLength();
         $this->validateOverFifteen();
@@ -38,12 +32,14 @@ class PersonCapsule implements AgeCapsuleInterface, NameCapsuleInterface
     public function setName(string $name): void
     {
         $this->name = ucwords($name);
+        $this->validateNameLength();
     }
 
     #[Override]
     public function setAge(int $age): void
     {
         $this->age = $age;
+        $this->validateOverFifteen();
     }
 
     public function setGrade(GradeEnum $grade): void
