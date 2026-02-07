@@ -19,7 +19,7 @@ class PersonCapsule implements AgeCapsuleInterface, NameCapsuleInterface
         #[ValidateLength(4, 15)]
         private(set) string $name
         = NameCapsuleInterface::INIT_NAME {
-            get => 'Mr.'.$this->name;
+            get => 'Mr.'.ucwords($this->name);
         },
         private(set) int $age = AgeCapsuleInterface::INIT_AGE,
         private(set) GradeEnum $grade = GradeEnum::BRONZE
