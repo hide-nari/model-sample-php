@@ -1,6 +1,7 @@
 Person Model Sample on php version 8.4 or later.
 
 ## About this package
+
 Person Model two programming pattern.
 
 - public name
@@ -15,20 +16,32 @@ Person Capsule Model
 - public setAge()
 
 ## Bind Check
+
 Model bind check with attribute
+
 - name(4 to 15 length with added [Mr.] include)
 
 Model bind check with trait
+
 - age(over 15)
 
 ## Update Rules
 
 When updating, execute the following command.
 
-```
+```Bash
 herd coverage ./vendor/bin/pest --coverage
+```
+
+```Bash
 ./vendor/bin/pest
+```
+
+```Bash
 ./vendor/bin/pint
+```
+
+```Bash
 ./vendor/bin/phpstan analyse src --level=10
 ```
 
