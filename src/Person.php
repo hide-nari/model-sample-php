@@ -27,12 +27,7 @@ class Person implements AgeInterface, NameInterface
         //            set => $this->age = $value;
         //        },
         public GradeEnum $grade = GradeEnum::BRONZE,
-        //        {
-        //            get => $this->grade;
-        //            set => $this->grade = $value;
-        //        },
-    )
-    {
+    ) {
         $this->validateNameLength();
         $this->validateOverFifteen();
     }
